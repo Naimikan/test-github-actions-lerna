@@ -37,7 +37,7 @@ jobs:
       - name: Install prerequisites
         run: npm i -g lerna
       - name: Install
-        run: npm ci
+        run: npm i
       - name: Build
         run: lerna run lint && lerna run build
       - name: Publish
