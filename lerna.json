@@ -1,0 +1,32 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "registry": "http://localhost:4873/",
+      "message": "chore: publish",
+      "ignoreChanges": [
+        "*.md",
+        "package.json",
+        "package-lock.json"
+      ]
+    },
+    "changed": {
+      "ignoreChanges": [
+        "*.md",
+        "package.json",
+        "package-lock.json"
+      ]
+    },
+    "version": {
+      "message": "chore: version",
+      "ignoreChanges": [
+        "*.md",
+        "package.json",
+        "package-lock.json"
+      ]
+    }
+  }
+}

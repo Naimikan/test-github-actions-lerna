@@ -1,0 +1,58 @@
+{
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import",
+    "react-hooks"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    // Import
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": [
+      "error",
+      "never",
+      {
+        "packages": "always"
+      }
+    ],
+    // React
+    "react/no-array-index-key": 0,
+    "react/jsx-fragments": [2, "element"],
+    "react/jsx-props-no-spreading": [1, { "custom": "ignore" }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }],
+    "react/prefer-stateless-function": 0,
+    "react/button-has-type": 0,
+    "react/no-danger": 0,
+    "react/no-typos": 0,
+    // React hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    // a11y
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    // Others
+    "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }],
+    "class-methods-use-this": 0,
+    "linebreak-style": 0,
+    "max-len": ["error", 250, 2, { "ignoreComments": true }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 1 }],
+    "no-underscore-dangle": 0,
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": { "minProperties": 6, "multiline": true, "consistent": true },
+        "ObjectPattern": { "minProperties": 6, "multiline": true, "consistent": true }
+      }
+    ]
+  }
+}

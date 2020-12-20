@@ -1,0 +1,21 @@
+{
+  "name": "@test/button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "build": "webpack --config ./webpack.config.js --bail",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillem Aldeguer Lima <guillem.aldeguer@gmail.com> (https://naimikan.github.io/)",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://localhost:4873/"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "styled-components": "^4.3.2"
+  }
+}
