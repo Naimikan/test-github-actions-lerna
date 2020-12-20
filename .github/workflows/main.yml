@@ -34,7 +34,11 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install prerequisites
+        run: npm i -g lerna
       - name: Install
-        run: npm i && npm i -g lerna
+        run: npm ci
       - name: Build
         run: lerna run lint && lerna run build
+      - name: Publish
+        run: lerna publish --conventional-commits --conventional-graduate --include-merged-tags --yes
