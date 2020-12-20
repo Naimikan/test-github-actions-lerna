@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "build": "lerna run lint && lerna run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
